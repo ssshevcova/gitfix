@@ -66,13 +66,23 @@ print(Num+Num*11+Num*111)
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 
-Num=int(input("Введите число: "))
-Max=0
-while Num>0:
-    i=Num%10
-    if i>Max:
-        Max=i
-    Num=Num//10
-print(Max)
+profit = float(input("Введите выручку фирмы "))
+costs = float(input("Введите издержки фирмы "))
+if profit > costs:
+    print(f"Фирма работает с прибылью. Рентабельность выручки составила {profit / costs:.2f}")
+    workers = int(input("Введите количество сотрудников фирмы "))
+    print(f"прибыль в расчете на одного сторудника сотавила {profit / workers:.2f}")
+elif profit == costs:
+    print("Фирма работает в ноль")
+else:
+    print("Фирма работает в убыток")
+    
+    
+    
+    
+    
+    
+    
+    
 
 
